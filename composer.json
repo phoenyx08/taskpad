@@ -1,0 +1,18 @@
+{
+  "name": "phoenyx-studio/taskpad",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "phoenyx",
+      "email": "yury@serdyuk.pp.ua"
+    }
+  ],
+  "require": {
+    "ext-pdo": "*"
+  },
+  "autoload": {
+    "psr-4": {"App\\": "src/"}
+  }
+}
