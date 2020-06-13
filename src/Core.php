@@ -4,8 +4,21 @@ namespace App;
 
 use App\Service\Router;
 
+/**
+ * Class Core
+ *
+ * Central class of the application
+ *
+ * @package App
+ */
 class Core
 {
+    /**
+     * App start method
+     *
+     * Initializes the session and calls methods of the app lifecycle
+     *
+     */
     public function start()
     {
         session_start();
@@ -14,6 +27,13 @@ class Core
         $this->render($result);
     }
 
+    /**
+     * Render method
+     *
+     * Renders the specified template using provided variables
+     *
+     * @param $result array result of the methods of lifecycle before calling renderer
+     */
     protected function render($result)
     {
         $config = new Config();

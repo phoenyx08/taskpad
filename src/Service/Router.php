@@ -2,8 +2,23 @@
 
 namespace App\Service;
 
+/**
+ * Class Router
+ *
+ * Returns name of the controller and its method which accords to the path provided
+ *
+ * @package App\Service
+ */
 class Router
 {
+    /**
+     * Get Action Method
+     *
+     * Checks the $_SERVER['REQUEST_URI'] and returns data to call controller
+     *
+     * @return array Array which can be passed to call_user_func_array.
+     * It contains queried Controller, the relevant method and its arguments
+     */
     public static function getAction()
     {
         if ($_SERVER['REQUEST_URI'] == '/') {
