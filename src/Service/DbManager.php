@@ -41,34 +41,6 @@ class DbManager
         }
     }
 
-//    /**
-//     * @return Task[] Array
-//     */
-//    public function getAllTasks()
-//    {
-//        try {
-//            $result = $this->dbh->query("SELECT * FROM tasks");
-//            if ($result === FALSE) {
-//                $error = $this->dbh->errorInfo();
-//                if ($error[0] == '42S02' && $error[1] == 1146) {
-//                    $this->createTasksTable();
-//                    $result = $this->dbh->query("SELECT * FROM tasks");
-//                }
-//            }
-//            if ($result->rowCount() == 0) {
-//                return[];
-//            }
-//            $data = [];
-//            while ($item = $result->fetchObject('App\Model\Task')) {
-//                $data[] = $item;
-//            };
-//            return $data;
-//        } catch (Exception $e) {
-//            die('Something went wrong on getting list of tasks');
-//        }
-//
-//    }
-
     /**
      * Adding a task
      *
